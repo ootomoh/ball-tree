@@ -1,0 +1,5 @@
+# I don't know emacs
+.*.swp
+
+# exec
+balltree
