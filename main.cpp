@@ -6,8 +6,8 @@
 
 #define SAFE_RELEASE(p) if(p){delete (p); (p) = nullptr;}
 
-const int N = 21;
-const int D = 100;
+const int N = 31;
+const int D = 1000;
 
 class Point{
 	int id;
@@ -89,7 +89,7 @@ public:
 		}
 		std::sort(points.begin(),points.end(),[&largest_spread_dim](Point a,Point b){return a.getX(largest_spread_dim)<b.getX(largest_spread_dim);});
 		// 分割点
-		int c0 = (points.size()-1)/2;
+		int c0 = points.size()/2-1;
 		int c1 = points.size()/2;
 		Point split = (points[c0] + points[c1])/2.0f;
 
